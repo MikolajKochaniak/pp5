@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Formularz</title>
+  </head>
+  <body>
+    <h1>Formularz</h1>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <form>
+        <div class="form-group">
+          <label for="company">Nazwa firmy</label>
+          <input type="name" class="form-control" id="company" aria-describedby="emailHelp" placeholder="Nazwa firmy" required>
+        </div>
+        <div class="form-group">
+            <label for="companyNIP">NIP</label>
+            <input type="nip" class="form-control" id="companyNIP" aria-describedby="emailHelp" placeholder="NIP" required> 
+          </div>
+          <div class="form-group">
+            <label for="City">Miasto</label>
+            <input type="city" class="form-control" id="City" aria-describedby="emailHelp" placeholder="Miasto" required>   
+          </div>
+          <div class="form-group">
+            <label for="Street">Ulica</label>
+            <input type="street" class="form-control" id="Street" aria-describedby="emailHelp" placeholder="Ulica" required>  
+          </div>
+          <div class="form-group">
+            <label for="houseNumber">Numer domu</label>
+            <input type="number" class="form-control" id="houseNumber" aria-describedby="emailHelp" placeholder="Numer domu" required>       
+          </div>
+          <div class="form-group">
+            <label for="flatNumber">Numer mieszkania</label>
+            <input type="number" class="form-control" id="flatNumber" aria-describedby="emailHelp" placeholder="Numer mieszkania" required>
+          </div>
+          <div class="form-group">
+            <label for="zipCode">Kod pocztowy</label>
+            <input type="zip" class="form-control" id="zipCode" aria-describedby="emailHelp" placeholder="Kod pocztowy" required>           
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea">Uwagi</label>
+            <textarea class="form-control" id="exampleFormControlTextarea" rows="10"></textarea>
+          </div>
+
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Branża</option>
+            <option value="1">Budownictwo</option>
+            <option value="2">Nieruchomości</option>
+            <option value="3">Medycyna</option>
+          </select>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Zaznacz
+            </label>
+          </div>
+          <button type="button" class="btn btn-primary" onclick="zapiszDane()">Zapisz</button>
+      </form>   
+      <script src="script.js"></script>
+  </body>
+</html>

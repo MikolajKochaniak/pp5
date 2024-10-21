@@ -1,0 +1,12 @@
+$body-bg:black;
+$body-color:white;
+@import 'node_modules/bootstrap/scss/bootstrap';
+body{
+    .d-flex{
+        form{
+            .last-element label{
+                background-color: red;
+            }
+        }
+    }
+}

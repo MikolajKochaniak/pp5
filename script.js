@@ -12,8 +12,13 @@ function zapiszDane(event) {
         branza: document.querySelector('.last-element').value,
         aktywny: document.getElementById('flexCheckDefault').checked
     };
+    customerList.push(daneFormularza);
+    displayCustomerList();
 
+    document.getElementById('customerForm').style.display ="none";
+    document.getElementById('customerList').style.display ="block";
     console.log(daneFormularza);
+    
 }
 
 function wstawDane() {
@@ -41,3 +46,20 @@ function wstawDane() {
     // document.querySelector('.form-select').disabled = true;
     // document.getElementById('flexCheckDefault').disabled = true;
 }
+function showForm(){
+const form = document.getElementById('customerForm').style.display ="block";
+const list = document.getElementById('customerList').style.display ="none";
+}
+
+    var customerList= [];
+
+function displayCustomerList() {
+    let customerDataDiv = document.getElementById('customerData');
+    customerDataDiv.innerHTML = ''; // Clear previous data
+
+    // Iterate over the customerList array and display only the company names
+    customerList.forEach((customer, index) => {
+        customerDataDiv.innerHTML += `<p>${index + 1}. ${customer.nazwaFirmy}</p>`;
+    });
+}
+

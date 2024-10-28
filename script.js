@@ -1,6 +1,6 @@
 function zapiszDane(event) {
     event.preventDefault();
-    const daneFormularza = {
+    let daneFormularza = {
         nazwaFirmy: document.getElementById('company').value,
         nip: document.getElementById('companyNIP').value,
         miasto: document.getElementById('City').value,

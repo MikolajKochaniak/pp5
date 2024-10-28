@@ -53,13 +53,37 @@ const list = document.getElementById('customerList').style.display ="none";
 
     var customerList= [];
 
-function displayCustomerList() {
-    let customerDataDiv = document.getElementById('customerData');
-    customerDataDiv.innerHTML = ''; // Clear previous data
-
-    // Iterate over the customerList array and display only the company names
-    customerList.forEach((customer, index) => {
-        customerDataDiv.innerHTML += `<p>${index + 1}. ${customer.nazwaFirmy}</p>`;
-    });
-}
+    function displayCustomerList() {
+        let customerDataDiv = document.getElementById('customerData'); 
+        customerDataDiv.innerHTML = ''; // Clear previous data
+    
+        // Iterate over the customerList array using a for loop and display the company names with an edit button
+        for (let i = 0; i < customerList.length; i++) {
+            customerDataDiv.innerHTML += `
+                <p>${i + 1}. ${customerList[i].nazwaFirmy} 
+                <button onclick="editCustomer(${i})" class="btn btn-secondary btn-sm">Edytuj</button></p>`;
+        }
+    }
+    
+    function editCustomer(index) {
+        // Load the selected company's data back into the form fields for editing
+        const customer = customerList[index];
+        
+        document.getElementById('company').value = customer.nazwaFirmy;
+        document.getElementById('companyNIP').value = customer.nip;
+        document.getElementById('City').value = customer.miasto;
+        document.getElementById('Street').value = customer.ulica;
+        document.getElementById('houseNumber').value = customer.numerDomu;
+        document.getElementById('flatNumber').value = customer.numerMieszkania;
+        document.getElementById('zipCode').value = customer.kodPocztowy;
+        document.getElementById('exampleFormControlTextarea').value = customer.uwagi;
+        document.querySelector('.form-select').value = customer.branza;
+        document.getElementById('flexCheckDefault').checked = customer.aktywny;
+    
+        // Switch back to the form view for editing
+        document.getElementById('customerForm').style.display = "block";
+        document.getElementById('customerList').style.display = "none";
+    }
+    
+    
 

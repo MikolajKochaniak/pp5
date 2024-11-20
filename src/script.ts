@@ -84,6 +84,11 @@ const list = document.getElementById('customerList').style.display ="none";
         document.getElementById('customerForm').style.display = "block";
         document.getElementById('customerList').style.display = "none";
     }
+
+    
+
+
+
     
     
 

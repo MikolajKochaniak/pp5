@@ -1,5 +1,5 @@
 {
-  "include":["src"],
+  "include":["src", "my-project/src/app/MyInvoice/models/Supplier.ts", "my-project/src/app/MyInvoice/models/customer.ts", "my-project/src/app/MyInvoice/models/invoice.ts", "my-project/src/app/MyInvoice/models/unit.ts", "my-project/src/app/MyInvoice/models/tax.ts"],
   "compilerOptions": {
     "outDir":"./assets/js",
     /* Visit https://aka.ms/tsconfig to read more about this file */

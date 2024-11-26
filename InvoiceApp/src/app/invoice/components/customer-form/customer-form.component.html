@@ -1,0 +1,50 @@
+{{testVariable | json}}
+
+<form onsubmit="zapiszDane(event)">
+    <div class="form-group">
+      <label for="company" class="form-label first-element">Nazwa firmy</label>
+      <input type="text" class="form-control" id="company" aria-describedby="emailHelp" required/>
+    </div>
+    <div class="form-group">
+        <label for="companyNIP">NIP</label>
+        <input type="nip" class="form-control" id="companyNIP" required/> 
+      </div>
+      <div class="form-group">
+        <label for="City">Miasto</label>
+        <input type="city" class="form-control" id="City" required/>   
+      </div>
+      <div class="form-group">
+        <label for="Street">Ulica</label>
+        <input type="street" class="form-control" id="Street" required/>  
+      </div>
+      <div class="form-group">
+        <label for="houseNumber">Numer domu</label>
+        <input type="number" class="form-control" id="houseNumber" required/>       
+      </div>
+      <div class="form-group">
+        <label for="flatNumber">Numer mieszkania</label>
+        <input type="number" class="form-control" id="flatNumber" required/>
+      </div>
+      <div class="form-group">
+        <label for="zipCode">Kod pocztowy</label>
+        <input type="zip" class="form-control" id="zipCode" required/>           
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea" class="form-label last-element">Uwagi</label>
+        <textarea class="form-control" id="exampleFormControlTextarea" rows="10"></textarea>
+      </div>
+
+      <select class="form-select" aria-label="Default select example">
+        <option selected>Branża</option>
+        <option value="1">Budownictwo</option>
+        <option value="2">Nieruchomości</option>
+        <option value="3">Medycyna</option>
+      </select>
+
+      <div class="form-check last-element">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault"> Aktywny </label>
+      </div>
+      <button type="submit" class="btn btn-primary">Podsumuj i wyświetl liste</button>
+      <button type="button" class="btn btn-danger" onclick="wstawDane()">Wstaw dane i zablokuj</button>
+  </form>

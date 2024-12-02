@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Supplier } from '../../models/supplier';
+import { Customer } from '../../models/customer';
 
 @Component({
   selector: 'app-customer-form',
@@ -8,5 +9,9 @@ import { Supplier } from '../../models/supplier';
   standalone: false
 })
 export class CustomerFormComponent {
-  testVariable: Supplier = new Supplier("lala")
+  customer: Customer = new Customer();
+    
+    zapiszDane(){
+      console.log(this.customer)
+    }
 }

@@ -1,37 +1,37 @@
 {{customer | json}}
 
-<form #f="ngForm" (ngSubmit)="zapiszDane(event)" novalidete>
+<form #f="ngForm" (ngSubmit)="zapiszDane()" novalidete>
     <div class="form-group">
       <label for="company" class="form-label first-element">Nazwa firmy</label>
-      <input type="text" class="form-control" id="company" aria-describedby="emailHelp" name ="name" required [(ngModel)]="customer.name"/>
+      <input type="text" class="form-control" id="company" aria-describedby="emailHelp" name ="nazwa" [(ngModel)]="customer.nazwa" required/>
     </div>
     <div class="form-group">
         <label for="companyNIP">NIP</label>
-        <input type="nip" class="form-control" id="companyNIP" required/> 
+        <input type="nip" class="form-control" id="companyNIP" name ="nip" [(ngModel)]="customer.nip" required/> 
       </div>
       <div class="form-group">
         <label for="City">Miasto</label>
-        <input type="city" class="form-control" id="City" required/>   
+        <input type="city" class="form-control" id="City" name ="miasto" [(ngModel)]="customer.miasto" required/>   
       </div>
       <div class="form-group">
         <label for="Street">Ulica</label>
-        <input type="street" class="form-control" id="Street" required/>  
+        <input type="street" class="form-control" id="Street" name ="ulica" [(ngModel)]="customer.ulica" required/>  
       </div>
       <div class="form-group">
         <label for="houseNumber">Numer domu</label>
-        <input type="number" class="form-control" id="houseNumber" required/>       
+        <input type="number" class="form-control" id="houseNumber" name ="numerDomu" [(ngModel)]="customer.numerDomu" required/>       
       </div>
       <div class="form-group">
         <label for="flatNumber">Numer mieszkania</label>
-        <input type="number" class="form-control" id="flatNumber" required/>
+        <input type="number" class="form-control" id="flatNumber" name ="numerMieszkania" [(ngModel)]="customer.numerMieszkania" required/>
       </div>
       <div class="form-group">
         <label for="zipCode">Kod pocztowy</label>
-        <input type="zip" class="form-control" id="zipCode" required/>           
+        <input type="zip" class="form-control" id="zipCode" name ="kodPocztowy" [(ngModel)]="customer.kodPocztowy" required/>           
       </div>
       <div class="form-group">
         <label for="exampleFormControlTextarea" class="form-label last-element">Uwagi</label>
-        <textarea class="form-control" id="exampleFormControlTextarea" rows="10"></textarea>
+        <textarea class="form-control" id="exampleFormControlTextarea" rows="10" name ="uwagi" [(ngModel)]="customer.uwagi"></textarea>
       </div>
 
       <select class="form-select" aria-label="Default select example">
@@ -42,7 +42,7 @@
       </select>
 
       <div class="form-check last-element">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name ="aktywny" [(ngModel)]="customer.aktywny" required>
         <label class="form-check-label" for="flexCheckDefault"> Aktywny </label>
       </div>
       <button type="submit" class="btn btn-primary">Podsumuj i wyświetl liste</button>

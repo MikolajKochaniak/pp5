@@ -1,6 +1,6 @@
 {{customer | json}}
 
-<form #f="ngForm" (ngSubmit)="zapiszDane()" novalidete>
+<form #f="ngForm" (ngSubmit)="saveData()" novalidete>
     <div class="form-group">
       <label for="company" class="form-label first-element">Nazwa firmy</label>
       <input type="text" class="form-control" id="company" aria-describedby="emailHelp" name ="nazwa" [(ngModel)]="customer.nazwa" required/>

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Customer } from '../models/customer';
+import { CustomerService } from '../services/customer.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-customer-list-component',
@@ -8,10 +10,10 @@ import { Customer } from '../models/customer';
   styleUrl: './customer-list-component.component.scss'
 })
 export class CustomerListComponentComponent {
-
-    customer: Customer = new Customer();
-    
-    zapiszDane(){
-      console.log(this.customer)
-    }
+  customerList: Customer[];
+constructor(
+  private customerService: CustomerService){
+    console.log(this.customerService.getCustomer());
+    this.customerList = this.customerService.getCustomer();
+  }
 }
